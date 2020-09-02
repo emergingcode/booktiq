@@ -1,0 +1,26 @@
+version: '3.7'
+services:
+  book-service:
+    image: book-service:booktiq-apiservice
+    build: ./book-service
+    container_name: book-service
+    ports:
+        - 9001:9001
+  pricing-service:
+    image: pricing-service:booktiq-apiservice
+    build: ./pricing-service
+    container_name: pricing-service
+    ports:
+        - 9002:9002
+  rating-service:
+    image: book-rating:booktiq-apiservice
+    build: ./rating-service
+    container_name: rating-service
+    ports:
+        - 9003:9003
+  api-gateway:
+    image: api-gateway:booktiq-apiservice
+    build: ./api-gateway
+    container_name: api-gateway
+    ports:
+        - 9000:9000

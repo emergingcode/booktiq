@@ -1,0 +1,77 @@
+{
+  "GlobalConfiguration": {},
+  "Routes": [
+    {
+      "ServiceName": "UserService",
+      "DownstreamPathTemplate": "/users",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "jsonplaceholder.typicode.com",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/metadata/users",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+
+    {
+      "ServiceName": "BookService",
+      "DownstreamPathTemplate": "/api/books/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "book-service",
+          "Port": 9001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/books/{id}/details",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Priority": 2,
+      "Key": "Book"
+    },
+
+    {
+      "ServiceName": "PricingService",
+      "DownstreamPathTemplate": "/api/booksprices/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "pricing-service",
+          "Port": 9002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/books/{id}/price",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Priority": 1,
+      "Key": "BookPrice"
+    },
+
+    {
+      "ServiceName": "RatingService",
+      "DownstreamPathTemplate": "/api/booksratings/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "rating-service",
+          "Port": 9003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/books/{id}/ratings",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Priority": 0,
+      "Key": "BookRating"
+    }
+  ],
+  "Aggregates": [
+    {
+      "RouteKeys": [
+        "Book",
+        "BookPrice",
+        "BookRating"
+      ],
+      "UpstreamPathTemplate": "/api/v1/books/{id}/aggregated-details",
+      "Aggregator": "BookDetailsAggregator"
+    }
+  ]
+}
