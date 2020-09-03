@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ApiGgatewayBFF.Models
+namespace api_gateway.Models
 {
     public class BookRating
     {

@@ -2,7 +2,7 @@
   "GlobalConfiguration": {},
   "Routes": [
     {
-      "ServiceName": "UserService",
+      "ServiceName": "",
       "DownstreamPathTemplate": "/users",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -16,7 +16,7 @@
     },
 
     {
-      "ServiceName": "BookService",
+      "ServiceName": "",
       "DownstreamPathTemplate": "/api/books/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -32,7 +32,7 @@
     },
 
     {
-      "ServiceName": "PricingService",
+      "ServiceName": "",
       "DownstreamPathTemplate": "/api/booksprices/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -48,7 +48,7 @@
     },
 
     {
-      "ServiceName": "RatingService",
+      "ServiceName": "",
       "DownstreamPathTemplate": "/api/booksratings/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [

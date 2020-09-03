@@ -19,8 +19,7 @@
     },
     "pricing_service": {
       "commandName": "Project",
-      "launchBrowser": true,
-      "launchUrl": "weatherforecast",
+      "launchBrowser": false,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

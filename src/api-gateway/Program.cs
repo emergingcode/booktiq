@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace ApiGgatewayBFF
+namespace api_gateway
 {
     public class Program
     {

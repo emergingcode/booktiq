@@ -1,16 +1,16 @@
-﻿namespace ApiGgatewayBFF
+using api_gateway.Aggregators;
+
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+
+using Ocelot.DependencyInjection;
+using Ocelot.Middleware;
+
+namespace api_gateway
 {
-    using ApiGgatewayBFF.Aggregators;
-
-    using Microsoft.AspNetCore.Builder;
-    using Microsoft.AspNetCore.Hosting;
-    using Microsoft.Extensions.Configuration;
-    using Microsoft.Extensions.DependencyInjection;
-    using Microsoft.Extensions.Hosting;
-
-    using Ocelot.DependencyInjection;
-    using Ocelot.Middleware;
-
     public class Startup
     {
         public Startup(IWebHostEnvironment env)
@@ -31,7 +31,7 @@
         {
             services
                 .AddOcelot(Configuration)
-                .AddTransientDefinedAggregator<BookDetailsAggregator>(); ;
+                .AddTransientDefinedAggregator<BookDetailsAggregator>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

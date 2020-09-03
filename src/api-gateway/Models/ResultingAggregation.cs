@@ -1,4 +1,4 @@
-﻿namespace ApiGgatewayBFF.Models
+﻿namespace api_gateway.Models
 {
     public class ResultingAggregation<T> where T : class
     {

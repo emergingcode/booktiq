@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:8001",
+      "applicationUrl": "http://localhost:3599",
       "sslPort": 0
     }
   },
@@ -17,21 +17,20 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "api_gateway_bff": {
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": false,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/weatherforecast",
+      "publishAllPorts": true
+    },
+    "book_service": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "weatherforecast",
+      "launchUrl": "bookprice",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "http://localhost:9000"
-    },
-    "Docker": {
-      "commandName": "Docker",
-      "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/weatherforecast",
-      "environmentVariables": {},
-      "httpPort": 8001
+      "applicationUrl": "http://localhost:9001"
     }
   }
 }
