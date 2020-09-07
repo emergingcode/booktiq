@@ -21,3 +21,11 @@ services:
     container_name: api-gateway
     ports:
         - 9000:9000
+
+  consul:
+    image: consul
+    container_name: "consul"
+    hostname: "consul"
+    ports:
+        - 8500:8500
+    command: agent -server -ui -node=server-1 -bootstrap-expect=1 -client=0.0.0.0

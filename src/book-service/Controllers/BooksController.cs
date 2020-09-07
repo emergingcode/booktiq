@@ -20,12 +20,6 @@ namespace product_service.Controllers
             Books = BookFactoryHelper.CreateBooks();
         }
 
-        //[HttpGet("hostname")]
-        //public string GetHostName()
-        //{
-        //    return Dns.GetHostName();
-        //}
-
         [HttpGet()]
         public IEnumerable<Book> Get()
         {
