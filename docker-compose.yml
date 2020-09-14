@@ -5,6 +5,11 @@ services:
     build: ./src/book-service
     container_name: book-service
 
+  book-service2:
+    image: book-service2:booktiq-apiservice
+    build: ./src/book-service2
+    container_name: book-service2
+
   pricing-service:
     image: pricing-service:booktiq-apiservice
     build: ./src/pricing-service

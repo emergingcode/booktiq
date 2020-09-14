@@ -22,6 +22,29 @@
     },
 
     {
+      //"ServiceName": "book-service",
+
+      // Using Load Balancer without Consul
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "book-service",
+          "Port": 9001
+        },
+        {
+          "Host": "book-service2",
+          "Port": 9005
+        }
+      ],
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "DownstreamPathTemplate": "/api/books/hostname",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/api/v1/books/hostname",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+
+    {
       "ServiceName": "book-pricing-service",
       "LoadBalancerOptions": {
         "Type": "LeastConnection"

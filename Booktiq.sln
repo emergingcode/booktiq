@@ -18,6 +18,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "rating-service", "src\ratin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "api-gateway", "src\api-gateway\api-gateway.csproj", "{27BD3935-4AF4-4519-95FD-B195D73AD9C5}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "book-service2", "src\book-service2\book-service2.csproj", "{7145F1C5-03D2-44F6-8EBB-F4F8CA357F43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +42,10 @@ Global
 		{27BD3935-4AF4-4519-95FD-B195D73AD9C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27BD3935-4AF4-4519-95FD-B195D73AD9C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27BD3935-4AF4-4519-95FD-B195D73AD9C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7145F1C5-03D2-44F6-8EBB-F4F8CA357F43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7145F1C5-03D2-44F6-8EBB-F4F8CA357F43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7145F1C5-03D2-44F6-8EBB-F4F8CA357F43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7145F1C5-03D2-44F6-8EBB-F4F8CA357F43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 		{67ABCF2D-4510-4647-86B5-20DF8D20EB80} = {DA096E4B-0B66-4B80-B866-920910F00902}
 		{E8F0C077-4430-4285-AB78-3A950EE9FB27} = {DA096E4B-0B66-4B80-B866-920910F00902}
 		{8F5A54FF-BE46-48FF-9AE7-A7007ACE85A8} = {DA096E4B-0B66-4B80-B866-920910F00902}
+		{7145F1C5-03D2-44F6-8EBB-F4F8CA357F43} = {DA096E4B-0B66-4B80-B866-920910F00902}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D6450D91-6B30-4C67-9F08-6AB2EC90F378}

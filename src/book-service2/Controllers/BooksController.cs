@@ -23,7 +23,7 @@ namespace product_service.Controllers
         [HttpGet("hostname")]
         public string GetHostName()
         {
-            return Environment.MachineName;
+            return Environment.MachineName + " - Second Machine";
         }
 
         [HttpGet()]
