@@ -1,0 +1,18 @@
+# Remove todas as imagens que estão marcadas como NONE
+docker image prune -f
+
+# Para todos os containers que estão com o status Running
+docker stop $(docker ps -q --filter status=running)
+
+# Remove todos os containers que estão com o status Exited
+docker rm $(docker ps -q --filter status=exited)
+
+# Remove todas as imagens que contaem  a string "booktiq" na sua tag
+docker rmi $(docker images --format "{{.Repository}}:{{.Tag}}"|findstr "booktiq")
+
+# Roda uma instancia de um container CONSUL (o comando abaixo funciona no WSL/WSL2)
+docker run -d \
+	-p 8500:8500 \
+	-p 8600:8600/udp \
+	--name=badger \
+	consul agent -server -ui -node=server-1 -bootstrap-expect=1 -client=0.0.0.0
